@@ -20,14 +20,16 @@ public class TipCalculator {
         System.out.print("What is the tip percentage? (0-100): ");
         int tip = scan.nextInt();
         double aIT = total * (tip/100.0);
+        aIT = (int)((aIT) * 100)/100.0;
         double perPerson = aIT/numPeople;
-        perPerson = (int)((perPerson + 0.5) * 100)/100.0;
+        perPerson = (int)((perPerson) * 100)/100.0;
         double costPPBT = total/numPeople;
+        costPPBT =  (int)((costPPBT) * 100)/100.0;
 
 
         System.out.println("---------------------------------------------------------------");
         System.out.println("Total bill before tip: " + (total) + "$");
-        System.out.println("Total percentage: " + tip + "$");
+        System.out.println("Total percentage: " + tip   );
         System.out.println("Total tip: " + aIT + "$");
         System.out.println("Total bill with tip: " + (aIT + total) + "$");
         System.out.println("Per person cost before tip: " + costPPBT + "$");
